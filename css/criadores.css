@@ -1,0 +1,89 @@
+/* ==========================================================================
+   CRIADORES
+   ========================================================================== */
+
+.criadores {
+  padding-block: var(--space-2xl);
+}
+
+.criadores .cabecalho-secao {
+  max-width: 40rem;
+}
+
+.grade-criadores {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+.cartao-criador {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.foto-criador {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface-alt);
+}
+
+.foto-criador img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nome-criador {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-top: var(--space-2xs);
+}
+
+.funcao-criador {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.biografia-criador {
+  font-size: var(--fs-sm);
+}
+
+.rede-social-criador {
+  display: flex;
+  gap: var(--space-2xs);
+  margin-top: var(--space-3xs);
+}
+
+.rede-social-criador a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.rede-social-criador a:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+@media (max-width: 1080px) {
+  .grade-criadores {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grade-criadores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

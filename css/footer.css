@@ -1,0 +1,121 @@
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.rodape-site {
+  background: var(--color-navy-deep);
+  color: var(--color-muted-on-dark);
+  padding-block: var(--space-2xl) var(--space-lg);
+}
+
+.topo-rodape {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+.marca-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.simbolo-marca-rodape {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: #fff;
+}
+
+.nome-marca-rodape {
+  height: 26px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.marca-rodape p {
+  font-size: var(--fs-sm);
+  max-width: 24rem;
+  color: var(--color-muted-on-dark);
+}
+
+.redes-rodape {
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.redes-rodape a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.coluna-rodape h4 {
+  color: #fff;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.coluna-rodape ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.coluna-rodape a {
+  font-size: var(--fs-sm);
+  color: var(--color-muted-on-dark);
+  transition: color var(--transition-fast);
+}
+
+.coluna-rodape a:hover {
+  color: #fff;
+}
+
+
+.coluna-rodape-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.coluna-rodape-central img {
+  margin-top: var(--space-2xs);
+}
+
+.base-rodape {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .topo-rodape {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .topo-rodape {
+    grid-template-columns: 1fr;
+  }
+  .base-rodape {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

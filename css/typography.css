@@ -1,0 +1,107 @@
+/* ==========================================================================
+   TIPOGRAFIA
+   ========================================================================== */
+
+   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+   .fonte-josefin {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  line-height: var(--lh-tight);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.titulo-secao {
+  font-size: var(--fs-2xl);
+  max-width: 46rem;
+}
+
+.titulo-principal {
+  font-size: clamp(2.5rem, 4.5vw, var(--fs-4xl));
+}
+
+h3 {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+
+p {
+  color: var(--color-muted);
+  line-height: var(--lh-normal);
+}
+
+.descricao {
+  font-size: var(--fs-md);
+  line-height: var(--lh-snug);
+}
+
+.chamada {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.chamada-fundo-escuro {
+  color: var(--color-muted-on-dark);
+}
+
+.chamada-fundo-cinza {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.chamada::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.figura-mono {
+  font-family: var(--font-mono);
+}
+
+.texto-fundo-escuro {
+  color: var(--color-on-dark);
+}
+
+.texto-fundo-escuro p,
+.texto-fundo-escuro .texto-suave-fundo-escuro {
+  color: var(--color-muted-on-dark);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.texto-fundo-escuro strong {
+  color: var(--color-on-dark);
+}

@@ -1,0 +1,135 @@
+/* ==========================================================================
+   PARA INSTITUIÇÕES
+   ========================================================================== */
+
+.instituicoes {
+  background: var(--color-navy);
+  padding-block: var(--space-2xl);
+  color: #fff;
+}
+
+.introducao-instituicoes {
+  max-width: 40rem;
+  margin-bottom: var(--space-xl);
+}
+
+.introducao-instituicoes .titulo-secao {
+  color: #fff;
+}
+
+.lista-instituicoes {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.lista-instituicoes li {
+  display: flex;
+  gap: var(--space-2xs);
+  font-size: var(--fs-sm);
+  color: var(--color-muted-on-dark);
+}
+
+.lista-instituicoes li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  margin-top: 0.5em;
+  flex-shrink: 0;
+}
+
+.painel-institucional {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.titulo-painel-institucional {
+  font-size: var(--fs-lg);
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+
+/* ---- Formulário sobre fundo escuro ---- */
+.formulario-institucional .campo label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.formulario-institucional .campo input,
+.formulario-institucional .campo select,
+.formulario-institucional .campo textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.formulario-institucional .campo input::placeholder,
+.formulario-institucional .campo textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.formulario-institucional .dica-campo {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.formulario-institucional .campo-selecao label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.formulario-institucional {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+
+.termos-inst{
+  position: relative;
+  color: var(--risk-1-bg);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(226, 233, 236, 0.45);
+  transition: text-shadow var(--transition-base), color var(--transition-base);
+  animation: termos-glow 2.4s ease-in-out infinite;
+}
+
+.termos-inst:hover {
+  color: var(--risk-1-bg);
+  text-shadow: 0 0 14px rgba(226, 233, 236, 0.75);
+}
+
+option{
+  color: var(--color-text);
+}
+
+
+.grade-formulario-institucional {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.acoes-formulario-institucional {
+  margin-top: var(--space-2xs);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1080px) {
+  .grade-instituicoes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 560px) {
+  .grade-formulario-institucional {
+    grid-template-columns: 1fr;
+  }
+}

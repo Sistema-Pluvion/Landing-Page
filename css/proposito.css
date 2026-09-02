@@ -1,0 +1,90 @@
+/* ==========================================================================
+   PROPÓSITO DA PLUVION
+   ========================================================================== */
+
+.proposito {
+  padding-block: var(--space-2xl);
+  background: var(--color-surface-alt);
+}
+
+.proposito .cabecalho-secao {
+  max-width: 44rem;
+}
+
+.grade-proposito {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.cartao-proposito {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  cursor: pointer;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.cartao-proposito:hover,
+.cartao-proposito:focus-visible {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.icone-proposito {
+  color: var(--color-primary);
+  font-size: 28px;
+  margin-bottom: var(--space-sm);
+}
+
+.titulo-proposito {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-2xs);
+}
+
+.resumo-proposito {
+  font-size: var(--fs-sm);
+}
+
+.detalhe-proposito {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows var(--transition-base), opacity var(--transition-base), margin-top var(--transition-base);
+}
+
+.detalhe-proposito p {
+  overflow: hidden;
+  font-size: var(--fs-sm);
+  border-top: 1px solid var(--color-border);
+  padding-top: 0;
+}
+
+.cartao-proposito.expandido .detalhe-proposito {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: var(--space-sm);
+}
+
+.cartao-proposito.expandido .detalhe-proposito p {
+  padding-top: var(--space-sm);
+}
+
+/* Fallback simples */
+@supports not (grid-template-rows: 0fr) {
+  .detalhe-proposito {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .cartao-proposito.expandido .detalhe-proposito {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grade-proposito {
+    grid-template-columns: 1fr;
+  }
+}

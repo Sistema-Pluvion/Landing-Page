@@ -1,0 +1,82 @@
+/* ==========================================================================
+   ESCALA DE RISCO
+   ========================================================================== */
+
+.risco {
+  padding-block: var(--space-2xl);
+  text-align: center;
+}
+
+.risco .cabecalho-secao {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+  max-width: 40rem;
+}
+
+.niveis-risco {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  text-align: left;
+}
+
+.cartao-risco {
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  color: #fff;
+  min-height: 148px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-base);
+}
+
+.cartao-risco:hover {
+  transform: translateY(-4px);
+}
+
+.cartao-risco-1 { background: var(--risk-1); }
+.cartao-risco-2 { background: var(--risk-2);   color: #fff; }
+.cartao-risco-3 { background: var(--risk-3); }
+.cartao-risco-4 { background: var(--risk-4); }
+
+.nivel-cartao-risco {
+  font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.titulo-cartao-risco {
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-block: var(--space-2xs);
+}
+
+.descricao-cartao-risco {
+  font-size: var(--fs-sm);
+  color: #fff;
+  opacity: 0.92;
+}
+
+.cartao-risco-2 .descricao-cartao-risco,
+.cartao-risco-2 .nivel-cartao-risco {
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .niveis-risco {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .niveis-risco {
+    grid-template-columns: 1fr;
+  }
+}

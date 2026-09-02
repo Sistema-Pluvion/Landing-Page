@@ -1,0 +1,318 @@
+/* ==========================================================================
+   COMPONENTES REUTILIZÁVEIS
+   ========================================================================== */
+
+.conteiner {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.secao {
+  padding-block: var(--space-2xl);
+}
+
+.cabecalho-secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- Botões ---- */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  border: 1.5px solid transparent;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+}
+
+.botao:active {
+  transform: translateY(0);
+}
+
+.botao-principal {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(82, 125, 147, 0.28);
+}
+
+.botao-principal:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 10px 26px rgba(82, 125, 147, 0.36);
+}
+
+.botao-secundario {
+  background: transparent;
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.botao-secundario:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.botao-fundo-escuro {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--color-on-dark);
+}
+
+.botao-fundo-escuro:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.botao-bloco {
+  width: 100%;
+}
+
+.botao[disabled] {
+  opacity: 0.6;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.botao .carregando {
+  display: none;
+}
+
+.botao.carregando .carregando {
+  display: inline-flex;
+}
+
+.botao.carregando .rotulo-botao {
+  opacity: 0.8;
+}
+
+/* ---- Spinner ---- */
+.carregando {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Cards ---- */
+.cartao {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.cartao-interativo {
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.cartao-interativo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+}
+
+/* ---- Badges ---- */
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.ponto-etiqueta {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ---- Números de passo / índice ---- */
+.indice-etapa {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: var(--fs-sm);
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ---- Formulário ---- */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.campo label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text-soft);
+}
+
+.dica-campo {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+  background: var(--color-surface);
+  font-size: var(--fs-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(82, 125, 147, 0.18);
+  outline: none;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
+.campo.com-erro input,
+.campo.com-erro select,
+.campo.com-erro textarea {
+  border-color: var(--color-danger);
+}
+
+.erro-campo {
+  display: none;
+  font-size: 0.78rem;
+  color: var(--color-danger);
+}
+
+.campo.com-erro .erro-campo {
+  display: block;
+}
+
+.linha-campo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.campo-selecao {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2xs);
+}
+
+.campo-selecao input {
+  margin-top: 0.2rem;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.campo-selecao label {
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  color: var(--color-text-soft);
+}
+
+/* ---- Estados de formulário ---- */
+.status-formulario {
+  display: none;
+  align-items: flex-start;
+  gap: var(--space-2xs);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  margin-top: var(--space-sm);
+}
+
+.status-formulario.visivel {
+  display: flex;
+}
+
+.status-formulario-sucesso {
+  background: var(--risk-1-bg);
+  color: #17593d;
+}
+
+.status-formulario-erro {
+  background: var(--risk-4-bg);
+  color: #7d1526;
+}
+
+/* ---- Divisor de seção ---- */
+.divisor {
+  height: 1px;
+  background: var(--color-border);
+  border: none;
+}
+
+/* ---- Visually revealed on scroll ---- */
+.aparecer {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.aparecer.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aparecer {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---- Placeholder visual ---- */
+.caixa-reserva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  background: var(--color-surface-alt);
+  border: 1.5px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+  text-align: center;
+  padding: var(--space-lg);
+}
+
+.caixa-reserva span {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}

@@ -1,0 +1,66 @@
+/* ==========================================================================
+   COMO FUNCIONA
+   ========================================================================== */
+
+.como-funciona {
+  padding-block: var(--space-2xl);
+  background: var(--color-surface-alt);
+}
+
+.como-funciona .cabecalho-secao {
+  max-width: 42rem;
+}
+
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  position: relative;
+}
+
+.etapas::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 4%;
+  right: 4%;
+  height: 1px;
+  background: var(--color-border-strong);
+}
+
+.etapa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.numero-etapa {
+  background: var(--color-background);
+  width: fit-content;
+  padding-right: var(--space-2xs);
+}
+
+.etapa h3 {
+  font-size: var(--fs-md);
+}
+
+.etapa p {
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 900px) {
+  .etapas {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-lg);
+  }
+  .etapas::before {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .etapas {
+    grid-template-columns: 1fr;
+  }
+}
