@@ -296,7 +296,7 @@ Essa organização facilita a manutenção, evolução e compreensão do projeto
 
 ### 🔗 Acesse a Landing Page
 
-[🌐 **Acessar a Landing Page do Pluvion**](https://katarina-freire-silva.github.io/Pluvion-Landing-Page/)
+[🌐 **Acessar a Landing Page do Pluvion**](https://sistema-pluvion.github.io/Landing-Page/)
 
 O site apresenta a proposta completa do Pluvion, desde a problemática das enchentes e alagamentos até a solução desenvolvida pela equipe.
 
@@ -306,7 +306,7 @@ O site apresenta a proposta completa do Pluvion, desde a problemática das enche
 
 O projeto está disponível no GitHub, contendo os arquivos utilizados para desenvolvimento da Landing Page.
 
-[💻 **Acessar o Repositório no GitHub**](https://github.com/katarina-freire-silva/Pluvion-Landing-Page)
+[💻 **Acessar o Repositório no GitHub**](https://github.com/Sistema-Pluvion/Landing-Page)
 
 ---
 
