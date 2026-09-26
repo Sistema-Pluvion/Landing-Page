@@ -58,14 +58,18 @@ async function submitInstitutionalRequest(payload) {
   const response = await fetch(Pluvion.CONFIG.institutionalRequestEndpoint, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
+    body: JSON.stringify({
+      data: payload,
+    }),
   });
 
   if (!response.ok) {
     throw new Error('REQUEST_FAILED');
   }
 
-  return response.json();
+  const result = await response.json();
+
+  return result.result;
 }
 
 function buildPayload(form) {
