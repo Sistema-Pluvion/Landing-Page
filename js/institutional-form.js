@@ -82,10 +82,9 @@ function buildPayload(form) {
     institutionType: data.get('institutionType')?.toString().trim(),
     city: data.get('city')?.toString().trim(),
     state: data.get('state')?.toString().trim(),
-    deviceInterestCount: data.get('deviceInterestCount')?.toString().trim() || null,
+    estimatedInterest: data.get('deviceInterestCount')?.toString().trim() || null,
     message: data.get('message')?.toString().trim() || null,
-    consent: form.elements.namedItem('consent')?.checked ?? false,
-    submittedAt: new Date().toISOString(),
+    termsAccepted: form.elements.namedItem('consent')?.checked ?? false,
   };
 }
 
