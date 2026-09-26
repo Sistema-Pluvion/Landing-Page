@@ -97,18 +97,10 @@
   opacity: 0.8;
 }
 
-/* ---- Spinner ---- */
 .carregando {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  width: 80%;
+  height: 80%;
   border: 2px solid rgba(255, 255, 255, 0.4);
-  border-top-color: #fff;
-  animation: spin 0.7s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
 }
 
 /* ---- Cards ---- */
